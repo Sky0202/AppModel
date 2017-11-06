@@ -2,11 +2,12 @@
 <resources>
 
     <!--箭头文字-->
-    <declare-styleable name="arrorTextView">
-        <attr name="blackTitle" format="string" />
-        <attr name="grayTitle" format="string" />
-        <attr name="titleImage" format="reference" />
-        <attr name="grayColor" format="color" />
+    <declare-styleable name="ArrowLayout">
+        <attr name="arrowTitle" format="string" />
+        <attr name="arrowDesc" format="string" />
+        <attr name="arrowTitleImg" format="reference" />
+        <attr name="arrowDescColor" format="color" />
+        <attr name="arrowLine" format="boolean" />
     </declare-styleable>
 
     <!-- 提交动画按钮 -->
@@ -18,7 +19,7 @@
         <attr name="buttonTextSize" format="dimension" />
         <attr name="buttonAnimationDuration" format="float" />
         <attr name="buttonOkColor" format="color" />
-        <attr name="buttonMoveupDistance" format="float"/>
+        <attr name="buttonMoveupDistance" format="float" />
 
     </declare-styleable>
 
