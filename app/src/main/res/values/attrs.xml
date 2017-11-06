@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--箭头文字-->
+    <declare-styleable name="arrorTextView">
+        <attr name="blackTitle" format="string" />
+        <attr name="grayTitle" format="string" />
+        <attr name="titleImage" format="reference" />
+        <attr name="grayColor" format="color" />
+    </declare-styleable>
+
+    <!-- 提交动画按钮 -->
+    <declare-styleable name="CircleSubmitButton">
+
+        <attr name="buttonText" format="string" />
+        <attr name="buttonTextColor" format="color" />
+        <attr name="buttonBackground" format="color" />
+        <attr name="buttonTextSize" format="dimension" />
+        <attr name="buttonAnimationDuration" format="float" />
+        <attr name="buttonOkColor" format="color" />
+        <attr name="buttonMoveupDistance" format="float"/>
+
+    </declare-styleable>
+
+</resources>

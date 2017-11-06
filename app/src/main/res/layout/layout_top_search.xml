@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimen_x30">
+
+    <TextView
+        android:id="@+id/tv_home_location"
+        style="@style/text_white_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_x20"
+        android:drawablePadding="@dimen/dimen_x10"
+        android:drawableRight="@drawable/icon_home_loction_arrow_down"
+        android:text="北京" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_searchbg"
+        android:gravity="center"
+        android:padding="@dimen/dimen_x20">
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/dimen_x45"
+            android:layout_height="@dimen/dimen_x45"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_x20"
+            android:src="@drawable/indexsearch" />
+
+        <TextView
+            style="@style/text_gray_45"
+            android:layout_toRightOf="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_x20"
+            android:hint="搜商品,找品牌" />
+
+    </RelativeLayout>
+
+</LinearLayout>

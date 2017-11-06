@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_grayline" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_x10">
+
+        <!--第一个bar-->
+        <LinearLayout
+            android:id="@+id/bottombar_ll_first"
+            style="@style/main_bottombar_ll">
+
+            <ImageView
+                android:id="@+id/bottombar_iv_first"
+                style="@style/main_fragment_bottombar_iv"
+                android:src="@drawable/bot1" />
+
+            <TextView
+                android:id="@+id/bottombar_tv_first"
+                style="@style/main_fragment_bottombar_tv"
+                android:text="第一页" />
+
+        </LinearLayout>
+
+        <!--第二个bar-->
+        <LinearLayout
+            android:id="@+id/bottombar_ll_second"
+            style="@style/main_bottombar_ll">
+
+            <ImageView
+                android:id="@+id/bottombar_iv_second"
+                style="@style/main_fragment_bottombar_iv"
+                android:src="@drawable/bot2" />
+
+            <TextView
+                android:id="@+id/bottombar_tv_second"
+                style="@style/main_fragment_bottombar_tv"
+                android:text="第二页" />
+        </LinearLayout>
+
+        <!--第三个bar-->
+        <LinearLayout
+            android:id="@+id/bottombar_ll_third"
+            style="@style/main_bottombar_ll">
+
+            <ImageView
+                android:id="@+id/bottombar_iv_third"
+                style="@style/main_fragment_bottombar_iv"
+                android:src="@drawable/bot3" />
+
+            <TextView
+                android:id="@+id/bottombar_tv_third"
+                style="@style/main_fragment_bottombar_tv"
+                android:text="第三页" />
+
+        </LinearLayout>
+
+        <!--第四个bar-->
+        <LinearLayout
+            android:id="@+id/bottombar_ll_fourth"
+            style="@style/main_bottombar_ll">
+
+            <ImageView
+                android:id="@+id/bottombar_iv_fourth"
+                style="@style/main_fragment_bottombar_iv"
+                android:src="@drawable/bot4" />
+
+            <TextView
+                android:id="@+id/bottombar_tv_fourth"
+                style="@style/main_fragment_bottombar_tv"
+                android:text="第四页" />
+        </LinearLayout>
+
+        <!--第五个bar-->
+        <LinearLayout
+            android:id="@+id/bottombar_ll_fifth"
+            style="@style/main_bottombar_ll"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/bottombar_iv_fifth"
+                style="@style/main_fragment_bottombar_iv"
+                android:src="@drawable/bot4" />
+
+            <TextView
+                android:id="@+id/bottombar_tv_fifth"
+                style="@style/main_fragment_bottombar_tv"
+                android:text="第五页" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
