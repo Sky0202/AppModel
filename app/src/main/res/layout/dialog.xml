@@ -4,26 +4,23 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/ic_loading_bg"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="16.0dip">
+    android:padding="@dimen/dimen_x30">
 
-    <com.pnikosis.materialishprogress.ProgressWheel
-        android:id="@+id/progress_wheel"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        wheel:matProg_barColor="@color/colorPrimary"
-        wheel:matProg_progressIndeterminate="true" />
+    <com.wang.avi.AVLoadingIndicatorView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        wheel:indicatorName="BallClipRotatePulseIndicator" />
 
     <TextView
         android:id="@+id/id_tv_loadingmsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginTop="8.0dip"
+        android:layout_marginTop="@dimen/dimen_x15"
+        android:layout_gravity="center_horizontal"
+        android:text=""
         android:textColor="#fff"
-        android:textSize="16.0dip" />
+        android:textSize="@dimen/dimen_x45" />
 
 </LinearLayout>
