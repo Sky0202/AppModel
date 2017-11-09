@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dialog_nan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_x30"
+        android:layout_marginRight="@dimen/dimen_x30"
+        android:background="@drawable/shape_top_circle"
+        android:gravity="center"
+        android:padding="@dimen/dimen_x30"
+        android:text="男"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/dimen_x50" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_x1"
+        android:layout_marginLeft="@dimen/dimen_x30"
+        android:layout_marginRight="@dimen/dimen_x30"
+        android:background="@color/color_gray" />
+
+    <TextView
+        android:id="@+id/tv_dialog_nv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_x30"
+        android:layout_marginRight="@dimen/dimen_x30"
+        android:background="@drawable/shape_bottom_circle"
+        android:gravity="center"
+        android:padding="@dimen/dimen_x30"
+        android:text="女"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/dimen_x50" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_x30"
+        android:background="@drawable/shape_grayframewhite"
+        android:text="取消"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/dimen_x50" />
+
+</LinearLayout>

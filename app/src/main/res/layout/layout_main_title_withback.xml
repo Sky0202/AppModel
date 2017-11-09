@@ -21,13 +21,19 @@
         android:layout_gravity="center"
         android:text="标题" />
 
-    <TextView
+    <com.fanqie.appmodel.common.customview.SuperTextView
         android:id="@+id/tv_main_right"
-        style="@style/text_white_45"
+        style="@style/text_white_40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
+        android:layout_marginRight="@dimen/dimen_x50"
+        android:gravity="center"
         android:lines="1"
-        android:layout_marginRight="@dimen/dimen_x50" />
+        android:padding="@dimen/dimen_x25"
+        android:text=""
+        android:visibility="gone"
+        app:pressedBackgroundColor="@color/color_orange_background"
+        app:radius="@dimen/dimen_x10" />
 
 </android.support.v7.widget.Toolbar>
