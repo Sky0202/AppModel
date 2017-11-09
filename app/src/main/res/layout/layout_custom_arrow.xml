@@ -17,8 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_line"
-        android:clickable="true"
-        android:focusable="true"
         android:padding="@dimen/dimen_x30">
 
         <ImageView

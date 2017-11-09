@@ -39,6 +39,8 @@ public class ArrowLayout extends RelativeLayout {
         super(context, attrs, defStyleAttr);
 
         View view = LayoutInflater.from(context).inflate(R.layout.layout_custom_arrow, this, true);
+        view.setClickable(true);
+        view.setFocusable(true);
         ivPicLeft = (ImageView) view.findViewById(R.id.iv_pic_left);
         tv_arrow_title = (TextView) view.findViewById(R.id.tv_arrow_title);
         tv_arrow_desc = (TextView) view.findViewById(R.id.tv_arrow_desc);
@@ -52,7 +54,8 @@ public class ArrowLayout extends RelativeLayout {
             desc = typedArray.getString(R.styleable.ArrowLayout_arrowDesc);
             img = typedArray.getResourceId(R.styleable.ArrowLayout_arrowTitleImg, 0);
             descColor = typedArray.getColor(R.styleable.ArrowLayout_arrowDescColor, getResources().getColor(R.color.color_gray));
-            hasLine = typedArray.getBoolean(R.styleable.ArrowLayout_arrowLine, true);  // 显示分割线
+            // 显示分割线
+            hasLine = typedArray.getBoolean(R.styleable.ArrowLayout_arrowLine, true);
             typedArray.recycle();
 
         }
