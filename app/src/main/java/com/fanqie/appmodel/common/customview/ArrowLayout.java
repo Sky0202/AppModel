@@ -58,7 +58,7 @@ public class ArrowLayout extends RelativeLayout {
         }
 
         tv_arrow_title.setText(title.isEmpty() ? "" : title);
-        tv_arrow_desc.setText(desc.isEmpty() ? "" : desc);
+        tv_arrow_desc.setText(desc == null ? "" : desc);
         tv_arrow_desc.setTextColor(descColor);
         line.setVisibility(hasLine ? VISIBLE : GONE);
         if (img != 0) {
