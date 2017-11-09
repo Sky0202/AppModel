@@ -4,8 +4,14 @@
     android:id="@+id/main_toolbar_withback"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@color/colorPrimary"
-    app:navigationIcon="@drawable/icon_back_white">
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/iv_top_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_x25"
+        android:src="@drawable/icon_back_white" />
 
     <TextView
         android:id="@+id/tv_main_title"
