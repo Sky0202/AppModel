@@ -135,7 +135,7 @@ public class StringUtil {
     /**
      * 登录验证
      */
-    private boolean verifyLogin(String name, String pwd) {
+    public boolean verifyLogin(String name, String pwd) {
 
         if (name.isEmpty()) {
             ToastUtils.showMessage("手机号不能为空");
@@ -154,7 +154,7 @@ public class StringUtil {
     /**
      * 注册验证
      */
-    private boolean verifyNumber(String name, String code, String pwd, String confPwd) {
+    public boolean verifyNumber(String name, String code, String pwd, String confPwd) {
 
         if (name.isEmpty()) {
             ToastUtils.showMessage("手机号不能为空");
