@@ -48,6 +48,7 @@ public abstract class BaseFragment extends Fragment {
         progressDialog.setCancelable(true);
         progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         TextView msg = (TextView) progressDialog.findViewById(R.id.id_tv_loadingmsg);
+        msg.setVisibility(dialogMsg.isEmpty() ? View.GONE : View.VISIBLE);
         msg.setText(dialogMsg);
         progressDialog.show();
     }

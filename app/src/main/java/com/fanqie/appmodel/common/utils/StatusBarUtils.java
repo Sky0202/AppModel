@@ -184,4 +184,14 @@ public class StatusBarUtils {
         return result;
     }
 
+    /** 创建时间：2017/10/23 14:22  描述：兼容小米 MIUI9  实现状态栏黑色字体 */
+    public static void MIUI9SetStatusBarLightMode(Window window) {
+        if (window != null) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
+    }
+
+
 }

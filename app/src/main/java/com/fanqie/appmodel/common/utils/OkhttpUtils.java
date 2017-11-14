@@ -86,6 +86,7 @@ public class OkhttpUtils {
         Request request = new Request.Builder()
                 .url(url)
                 .build();
+        DebugLog.d(url);
 
         mOkHttpClient.newCall(request).enqueue(new Callback() {
             @Override
@@ -131,6 +132,7 @@ public class OkhttpUtils {
                 .url(url)
                 .post(formBody)
                 .build();
+        DebugLog.d(url);
 
         for (int i = 0; i < formBody.size(); i++) {
             DebugLog.d(formBody.name(i) + "---" + formBody.value(i));
@@ -175,6 +177,7 @@ public class OkhttpUtils {
 
         FormBody formBody = new FormBody.Builder()
                 .build();
+        DebugLog.d(url);
 
         //request需求
         final Request request = new Request.Builder()
@@ -220,6 +223,7 @@ public class OkhttpUtils {
 
         MediaType MEDIA_TYPE_PNG = MediaType.parse("image/*");
         File file = new File(filepath);
+        DebugLog.d(url);
 
         //图片内容
         MultipartBody requestBody = new MultipartBody.Builder()
@@ -269,6 +273,7 @@ public class OkhttpUtils {
     public void updateImages(String url, List<String> imgPaths, final RequestCallback requestCallback) {
 
         MediaType MEDIA_TYPE_PNG = MediaType.parse("image/png");
+        DebugLog.d(url);
 
         // imgPaths 为存放图片的url集合
         MultipartBody.Builder builder = new MultipartBody.Builder().setType(MultipartBody.FORM);
@@ -322,6 +327,7 @@ public class OkhttpUtils {
      */
     public void uploadFile(String url, String filepath, final RequestCallback requestCallback) {
 
+        DebugLog.d(url);
         MediaType MEDIA_TYPE_PNG = MediaType.parse("aac");
         File file = new File(filepath);
         //图片内容

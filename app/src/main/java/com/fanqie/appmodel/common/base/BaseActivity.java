@@ -28,7 +28,7 @@ import butterknife.Unbinder;
  */
 public abstract class BaseActivity extends AppCompatActivity implements TakePhoto.TakeResultListener, InvokeListener {
 
-    Dialog progressDialog;
+    public Dialog progressDialog;
     private Unbinder unbinder;
 
     /**

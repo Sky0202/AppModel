@@ -39,16 +39,20 @@ public class ImageUtils extends TakePhotoActivity {
     public static void loadCirclePic(final Context context, String url, final ImageView iv_show) {
 
         //加载圆角图片
-        Glide.with(context).load(url).asBitmap().centerCrop().into(new BitmapImageViewTarget(iv_show) {
-            @Override
-            protected void setResource(Bitmap resource) {
-                RoundedBitmapDrawable circularBitmapDrawable =
-                        RoundedBitmapDrawableFactory.create(context.getResources(), resource);
-                circularBitmapDrawable.setCircular(true);
-                iv_show.setImageDrawable(circularBitmapDrawable);
-            }
-        });
-
+        Glide.with(context)
+                .load(url)
+                .asBitmap()
+                .centerCrop()
+                .error(R.drawable.tx)
+                .into(new BitmapImageViewTarget(iv_show) {
+                    @Override
+                    protected void setResource(Bitmap resource) {
+                        RoundedBitmapDrawable circularBitmapDrawable =
+                                RoundedBitmapDrawableFactory.create(context.getResources(), resource);
+                        circularBitmapDrawable.setCircular(true);
+                        iv_show.setImageDrawable(circularBitmapDrawable);
+                    }
+                });
     }
 
     /**
