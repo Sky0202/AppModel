@@ -54,9 +54,9 @@ public abstract class BaseActivity extends AppCompatActivity implements TakePhot
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+    public void onSaveInstanceState(Bundle outState) {
         getTakePhoto().onSaveInstanceState(outState);
-        super.onSaveInstanceState(outState, outPersistentState);
+        super.onSaveInstanceState(outState);
     }
 
     /**
