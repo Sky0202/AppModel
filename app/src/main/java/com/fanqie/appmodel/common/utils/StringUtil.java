@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
+import android.text.TextUtils;
 import android.text.style.ForegroundColorSpan;
 
 import java.util.regex.Matcher;
@@ -82,15 +83,19 @@ public class StringUtil {
         return substring;
     }
 
+    // 建议正则表达 定义为常量
+    private static Pattern NUMBER_PATTERN = Pattern.compile("[0-9]+");
+
     //判断填写的内容是不是数字
     public static boolean judgeNum(String str) {
-        Pattern pattern = Pattern.compile("[0-9]*");
-        Matcher isNum = pattern.matcher(str);
+
+        Matcher isNum = NUMBER_PATTERN.matcher(str);
         if (!isNum.matches()) {
             return false;
         }
         return true;
     }
+
 
     /**
      * 截取字符串
@@ -187,6 +192,26 @@ public class StringUtil {
         String pwdRegex = "^[a-zA-Z0-9]{6,16}$";
         if (!pwd.isEmpty()) {
             if (pwd.matches(pwdRegex)) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 创建时间：2017/11/23 17:42
+     * <p>
+     * 描述：检验银行卡号是否是 16位  或者 19位
+     *
+     * @author zpw
+     */
+    public static boolean vertifyBankNum(String bankNum) {
+        String pwdRegex = "^[\\d]{16}|[\\d]{19}$";
+        if (TextUtils.isEmpty(bankNum)) {
+            if (bankNum.matches(pwdRegex)) {
                 return true;
             } else {
                 return false;
