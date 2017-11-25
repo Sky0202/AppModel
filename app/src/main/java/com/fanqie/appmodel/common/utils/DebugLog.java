@@ -42,8 +42,7 @@ public final class DebugLog {
         StringBuilder builder = new StringBuilder();
         builder.append(methodName);
         builder.append("(").append(className).append(":").append(lineNumber).append(")*****");
-        String formatLog = FormattingJson(log);
-        builder.append(formatLog);
+        builder.append(log);
         return builder.toString();
 
     }

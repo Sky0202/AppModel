@@ -12,6 +12,10 @@ import com.fanqie.appmodel.common.bean.JsonResult;
 import com.fanqie.appmodel.common.constants.ConstantString;
 import com.fanqie.appmodel.main.activity.MainActivity;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -52,6 +56,8 @@ public class OkhttpUtils {
     private OkHttpClient mOkHttpClient;
     private static final int SECOND = 20; //各种超时的时间限制
     private Handler mDelivery;
+
+    private static final int JSON_INDENT = 2;
 
     private OkhttpUtils() {
         mOkHttpClient = new OkHttpClient();
@@ -103,7 +109,8 @@ public class OkhttpUtils {
                 int code = response.code();
                 if (code == 200) {
                     String responseBody = response.body().string();
-                    DebugLog.d("get方法 responseBody---" + responseBody);
+                    String json = FormattingJson(responseBody);
+                    DebugLog.d("get方法 responseBody---" + json);
                     JsonResult jsonResult = JSON.parseObject(responseBody, JsonResult.class);
                     processSuccessData(jsonResult, requestCallback);
                 } else if (code == 500) {
@@ -151,7 +158,8 @@ public class OkhttpUtils {
                 int code = response.code();
                 if (code == 200) {
                     String responseBody = response.body().string();
-                    DebugLog.d("post方法 responseBody---" + responseBody);
+                    String json = FormattingJson(responseBody);
+                    DebugLog.d("post方法 responseBody---" + json);
                     JsonResult jsonResult = JSON.parseObject(responseBody, JsonResult.class);
                     processSuccessData(jsonResult, requestCallback);
                 } else if (code == 500) {
@@ -200,7 +208,8 @@ public class OkhttpUtils {
                 int code = response.code();
                 if (code == 200) {
                     String responseBody = response.body().string();
-                    DebugLog.d("post方法 responseBody---" + responseBody);
+                    String json = FormattingJson(responseBody);
+                    DebugLog.d("post 方法--" + json);
                     JsonResult jsonResult = JSON.parseObject(responseBody, JsonResult.class);
                     processSuccessData(jsonResult, requestCallback);
                 } else if (code == 500) {
@@ -253,7 +262,8 @@ public class OkhttpUtils {
                 int code = response.code();
                 if (code == 200) {
                     String responseBody = response.body().string();
-                    DebugLog.d("图片上传 responseBody---" + responseBody);
+                    String json = FormattingJson(responseBody);
+                    DebugLog.d("图片上传 responseBody---" + json);
                     JsonResult jsonResult = JSON.parseObject(responseBody, JsonResult.class);
                     processSuccessData(jsonResult, requestCallback);
                 } else if (code == 500) {
@@ -307,7 +317,8 @@ public class OkhttpUtils {
                 int code = response.code();
                 if (code == 200) {
                     String responseBody = response.body().string();
-                    DebugLog.d("多图上传 responseBody---" + responseBody);
+                    String json = FormattingJson(responseBody);
+                    DebugLog.d("多图上传 responseBody---" + json);
                     JsonResult jsonResult = JSON.parseObject(responseBody, JsonResult.class);
                     processSuccessData(jsonResult, requestCallback);
                 } else if (code == 500) {
@@ -357,7 +368,8 @@ public class OkhttpUtils {
                 int code = response.code();
                 if (code == 200) {
                     String responseBody = response.body().string();
-                    DebugLog.d("文件上传 responseBody---" + responseBody);
+                    String json = FormattingJson(responseBody);
+                    DebugLog.d("文件上传 responseBody---" + json);
                     JsonResult jsonResult = JSON.parseObject(responseBody, JsonResult.class);
                     processSuccessData(jsonResult, requestCallback);
                 } else if (code == 500) {
@@ -461,4 +473,28 @@ public class OkhttpUtils {
         });
     }
 
+    /**
+     * 创建时间：2017/11/6 11:32  描述：格式化 json 数据
+     */
+    private static String FormattingJson(String json) {
+        if (json == null || json.length() == 0) {
+            return "Empty/Null json content";
+        }
+        try {
+            json = json.trim();
+            if (json.startsWith("{")) {
+                JSONObject jsonObject = new JSONObject(json);
+                String message = jsonObject.toString(JSON_INDENT);
+                return message;
+            }
+            if (json.startsWith("[")) {
+                JSONArray jsonArray = new JSONArray(json);
+                String message = jsonArray.toString(JSON_INDENT);
+                return message;
+            }
+            return "Invalid Json" + "\n" + json;
+        } catch (JSONException e) {
+            return "Invalid Json" + "\n" + json;
+        }
+    }
 }

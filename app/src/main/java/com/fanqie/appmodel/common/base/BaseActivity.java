@@ -3,7 +3,6 @@ package com.fanqie.appmodel.common.base;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -28,7 +27,7 @@ import butterknife.Unbinder;
  */
 public abstract class BaseActivity extends AppCompatActivity implements TakePhoto.TakeResultListener, InvokeListener {
 
-    public Dialog progressDialog;
+    private Dialog progressDialog;
     private Unbinder unbinder;
 
     /**
@@ -169,7 +168,9 @@ public abstract class BaseActivity extends AppCompatActivity implements TakePhot
 
     //取消进度圈
     public void dismissProgressdialog() {
-        progressDialog.dismiss();
+        if (progressDialog != null) {
+            progressDialog.dismiss();
+        }
     }
 
     //返回键默认finish
