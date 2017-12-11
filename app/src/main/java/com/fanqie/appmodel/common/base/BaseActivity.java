@@ -1,11 +1,17 @@
 package com.fanqie.appmodel.common.base;
 
+import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
@@ -35,13 +41,27 @@ public abstract class BaseActivity extends AppCompatActivity implements TakePhot
      */
     private TakePhoto takePhoto;
     private InvokeParam invokeParam;
+    public View emptyView;
+
+    private String[] mPermissionList = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.CALL_PHONE,
+            Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(setContentViewId());
+
+        emptyView = LayoutInflater.from(this).inflate(R.layout.empty_view, null, false);
+
         unbinder = ButterKnife.bind(this);
         getTakePhoto().onCreate(savedInstanceState);
+
+//        if (checkPermission(mPermissionList)) {
+//            ActivityCompat.requestPermissions(this, mPermissionList, 123);
+//        }
+
         //返回按钮
         onBack(setBackButton());
         //注册控制器
@@ -50,6 +70,24 @@ public abstract class BaseActivity extends AppCompatActivity implements TakePhot
         iniIntent(getIntent());
         iniData();
 
+    }
+
+    /**
+     * 检查是否需要申请权限
+     */
+    public boolean checkPermission(String[] permissions) {
+        if (Build.VERSION.SDK_INT < 22) {
+            return false;
+        }
+
+        for (String permission : permissions) {
+            if (ContextCompat.checkSelfPermission(this, permission) !=
+                    PackageManager.PERMISSION_GRANTED) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     @Override
@@ -115,7 +153,7 @@ public abstract class BaseActivity extends AppCompatActivity implements TakePhot
         return type;
     }
 
-    //设置xml文件
+    //设置布局文件
     public abstract int setContentViewId();
 
     //设置返回按钮

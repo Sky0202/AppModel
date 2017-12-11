@@ -24,7 +24,7 @@ import butterknife.Unbinder;
 public abstract class BaseFragment extends Fragment {
 
     private static final long DURATION = 200;
-    Dialog progressDialog;
+    private Dialog progressDialog;
     private Unbinder unbinder;
 
     @Nullable
@@ -63,7 +63,9 @@ public abstract class BaseFragment extends Fragment {
 
     //取消进度圈
     public void dismissProgressdialog() {
-        progressDialog.dismiss();
+        if (progressDialog != null) {
+            progressDialog.dismiss();
+        }
     }
 
     //初始化视图
