@@ -35,24 +35,18 @@ public class StringUtil {
         return false;
     }
 
-    //文字长度校验
-    public static boolean StringLength(int minLength, int maxLength, String str) {
-        if (str.length() > maxLength && str.length() < minLength) {
-            return false;
-        }
-        return true;
-    }
-
-    //手机号11位验证+正则表达式验证+空判断
-    // 移动：134、135、136、137、138、139、150、151、157(TD)、158、159、187、188
-    // 联通：130、131、132、152、155、156、185、186
-    // 电信：133、153、180、189、（1349卫通）
-    // 总结起来就是第一位必定为1，第二位必定为3或5或8，其他位置的可以为0-9
+    /**
+     * 手机号11位验证+正则表达式验证+空判断
+     * 移动：134、135、136、137、138、139、150、151、157、158、159、187、188
+     * 联通：130、131、132、152、155、156、185、186
+     * 电信：133、153、180、189、（1349卫通）
+     */
     public static boolean phoneNumVerification(String phoneNum) {
         String telRegex = "[1][123456789]\\d{9}";
         if (!phoneNum.isEmpty()) {
-            if (phoneNum.length() == 11) {//判断位数
-                if (phoneNum.matches(telRegex)) {//判断正则表达式
+            //判断位数
+            if (phoneNum.length() == 11) {
+                if (phoneNum.matches(telRegex)) {
                     return true;
                 } else {
                     return false;
@@ -74,15 +68,6 @@ public class StringUtil {
         return substring;
     }
 
-    public static String cutImageEditString(String str) {
-        String substring = "";
-        if (str.length() > 0) {
-            substring = str.substring(1, str.length() - 4);
-            return substring;
-        }
-        return substring;
-    }
-
     // 建议正则表达 定义为常量
     private static Pattern NUMBER_PATTERN = Pattern.compile("[0-9]+");
 
@@ -96,14 +81,6 @@ public class StringUtil {
         return true;
     }
 
-
-    /**
-     * 截取字符串
-     */
-    public static String cubString(String str, int start, int end) {
-        return str.substring(start, end);
-    }
-
     /**
      * json文件读取
      */
@@ -114,17 +91,6 @@ public class StringUtil {
         } catch (Exception e) {
             LogUtils.error(e);
             return "";
-        }
-    }
-
-    /**
-     * 判断字符串是否为空
-     */
-    public static boolean isEmpty(String str) {
-        if (str == null || str.isEmpty()) {
-            return true;
-        } else {
-            return false;
         }
     }
 
@@ -170,10 +136,13 @@ public class StringUtil {
         } else if (code.isEmpty()) {
             ToastUtils.showMessage("验证码不能为空");
             return false;
-        } else if (pwd.isEmpty() || confPwd.isEmpty()) {
+        } else if (pwd.isEmpty()) {
             ToastUtils.showMessage("密码不能为空");
             return false;
-        } else if (pwd.length() < 6 || confPwd.length() < 6) {
+        } else if (confPwd.isEmpty()) {
+            ToastUtils.showMessage("确认密码不能为空");
+            return false;
+        } else if (pwd.length() < 6) {
             ToastUtils.showMessage("请至少设置6位密码");
             return false;
         } else if (!pwd.equals(confPwd)) {
@@ -187,7 +156,13 @@ public class StringUtil {
         }
     }
 
-    // 校验密码   不包含特殊字符, 最少6位
+    /**
+     * 创建时间：2017/12/12 13:42
+     * <p>
+     * 描述：校验密码   不包含特殊字符, 最少6位
+     *
+     * @author zpw
+     */
     public static boolean pwdVertify(String pwd) {
         String pwdRegex = "^[a-zA-Z0-9]{6,16}$";
         if (!pwd.isEmpty()) {

@@ -62,7 +62,7 @@ public class SuperTextView extends AppCompatTextView {
     }
 
     public SuperTextView(Context context, AttributeSet attrs) {
-        this(context, attrs, R.attr.buttonStyle);
+        this(context, attrs, 0);
     }
 
     public SuperTextView(Context context, AttributeSet attrs, int defStyleAttr) {

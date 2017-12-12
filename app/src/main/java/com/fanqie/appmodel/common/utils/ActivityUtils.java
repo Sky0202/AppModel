@@ -3,6 +3,7 @@ package com.fanqie.appmodel.common.utils;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 
 import com.fanqie.appmodel.common.constants.ConstantString;
 
@@ -38,6 +39,15 @@ public class ActivityUtils {
     public static void startActivityWithInt(Context context, Class targetActivity, int from) {
         Intent intent = new Intent(context, targetActivity);
         intent.putExtra("from", from);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 创建时间：2017/5/18 11:51  描述：页面跳转 带参数
+     */
+    public static void startActivityWithBundle(Context context, Class targetActivity, Bundle bundle) {
+        Intent intent = new Intent(context, targetActivity);
+        intent.putExtra("bundle", bundle);
         context.startActivity(intent);
     }
 

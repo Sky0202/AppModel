@@ -1,11 +1,13 @@
 package com.fanqie.appmodel.common.utils;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.CountDownTimer;
+import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -30,7 +32,8 @@ public class CommonUtils {
             public void onTick(long millisUntilFinished) {
                 tv_time.setClickable(false);
                 tv_time.setText(millisUntilFinished / 1000 + "秒后可重发");
-                SpannableString spannableString = new SpannableString(tv_time.getText().toString());  //获取按钮上的文字
+                //获取按钮上的文字
+                SpannableString spannableString = new SpannableString(tv_time.getText().toString());
                 ForegroundColorSpan span = new ForegroundColorSpan(MyApplication.getContext().getResources().getColor(R.color.color_gray));
 
                 if (millisUntilFinished / 1000 >= 10) {
@@ -49,15 +52,6 @@ public class CommonUtils {
         };
         return countDownTimer;
 
-    }
-
-    /**
-     * 获取设备唯一编码
-     */
-    public static String getDeviceId() {
-        TelephonyManager teleService =
-                (TelephonyManager) MyApplication.getContext().getSystemService(Context.TELEPHONY_SERVICE);
-        return teleService.getDeviceId();
     }
 
     /**
