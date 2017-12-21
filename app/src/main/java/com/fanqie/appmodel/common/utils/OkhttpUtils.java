@@ -450,8 +450,6 @@ public class OkhttpUtils {
                 DebugLog.e(errorNum + "");
                 if (errorNum == 409 || errorNum == 401) {
                     PrefersUtils.clear();
-                    PrefersUtils.putBoolean(ConstantString.IS_FIRST, true);
-
                     if (errorNum == 409) {
                         ToastUtils.showMessage("您的账号在另一台设备上登录，请重新登录");
                     } else if (errorNum == 401) {
