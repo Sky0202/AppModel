@@ -21,7 +21,7 @@ import retrofit2.http.Url;
 public interface UrlInterface {
 
     // 上传图片
-    @POST("client/common/uploadImg")
+    @POST("/uploadImg")
     @Multipart
     Observable<HttpResult<JSONObject>> upload(
             @Part MultipartBody.Part file
@@ -31,8 +31,6 @@ public interface UrlInterface {
     @GET
     @Streaming
     Observable<Response<ResponseBody>> download(@Url String url);
-
-
 
 
 }
