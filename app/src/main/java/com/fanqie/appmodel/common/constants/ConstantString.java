@@ -15,6 +15,10 @@ public class ConstantString {
 
     public final static String FILE_PATH = "/demo/image/";
 
+    public final static String APK_PATH = "demo/apk/";
+
+    public final static String APK_NAME = "demo.apk";
+
     //令牌
     public final static String TOKEN = "token";
 

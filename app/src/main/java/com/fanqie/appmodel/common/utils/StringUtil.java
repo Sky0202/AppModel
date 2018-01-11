@@ -10,9 +10,6 @@ import android.text.style.ForegroundColorSpan;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import cn.qqtheme.framework.util.ConvertUtils;
-import cn.qqtheme.framework.util.LogUtils;
-
 /**
  * 文字工具类封装
  * Created by Administrator on 2016/6/20.
@@ -79,19 +76,6 @@ public class StringUtil {
             return false;
         }
         return true;
-    }
-
-    /**
-     * json文件读取
-     */
-    public static String readText(Context context, String assetPath) {
-        LogUtils.debug("read assets file as text: " + assetPath);
-        try {
-            return ConvertUtils.toString(context.getAssets().open(assetPath));
-        } catch (Exception e) {
-            LogUtils.error(e);
-            return "";
-        }
     }
 
     /**

@@ -68,9 +68,9 @@ public abstract class BaseWebViewActivity extends BaseActivity {
 
         //直接通过intent显示页面
 //        String title = it.getStringExtra(ConstantString.WEB_TITLE);
-//        url = it.getStringExtra(ConstantString.WEB_URL);
+//        URL = it.getStringExtra(ConstantString.WEB_URL);
 //        tv_title_basewebview.setText(title);
-//        DebugLog.i("zzz", "--url--:" + url + "--title--:" + title);
+//        DebugLog.i("zzz", "--URL--:" + URL + "--title--:" + title);
 
     }
 

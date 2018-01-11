@@ -1,14 +1,11 @@
 package com.fanqie.appmodel.common.utils;
 
-import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.CountDownTimer;
-import android.support.v4.app.ActivityCompat;
-import android.telephony.TelephonyManager;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
