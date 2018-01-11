@@ -26,7 +26,7 @@
         <!-- Android 7.0 需要 -->
         <provider
             android:name=".common.utils.MyFileProvider"
-            android:authorities="com.fanqie.rxdream.fileprovider"
+            android:authorities="com.fanqie.appmodel.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
 
