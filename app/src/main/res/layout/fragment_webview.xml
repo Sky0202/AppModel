@@ -7,29 +7,29 @@
     <RelativeLayout
         android:id="@+id/rl_toolbar_basewebview"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_x140"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
-        android:elevation="@dimen/dimen_x5">
+        android:elevation="@dimen/dimen_x1">
 
         <ImageView
             android:id="@+id/iv_back_basewebview"
-            android:layout_width="@dimen/dimen_x70"
-            android:layout_height="@dimen/dimen_x70"
+            android:layout_width="@dimen/dimen_x35"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
-            android:layout_margin="@dimen/dimen_x20"
-            android:background="@drawable/icon_back_white" />
+            android:layout_margin="@dimen/dimen_x5"
+            android:padding="@dimen/dimen_x10"
+            android:src="@drawable/icon_back_white" />
 
         <TextView
             android:id="@+id/tv_title_basewebview"
-            style="@style/text_white_50"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/sp_x16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="" />
+            android:layout_centerVertical="true" />
 
     </RelativeLayout>
-
 
     <WebView
         android:id="@+id/webview"

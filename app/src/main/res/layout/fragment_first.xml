@@ -6,7 +6,7 @@
     <include layout="@layout/layout_main_title_noback" />
 
     <TextView
-        style="@style/text_black_50"
+        style="@style/text_black_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

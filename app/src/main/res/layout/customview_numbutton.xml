@@ -7,21 +7,21 @@
 
     <ImageView
         android:id="@+id/custom_numbutton_iv_jian"
-        android:layout_width="@dimen/dimen_x50"
-        android:layout_height="@dimen/dimen_x50"
+        android:layout_width="@dimen/dimen_x25"
+        android:layout_height="@dimen/dimen_x25"
         android:background="@drawable/icon_btn_minus" />
 
     <TextView
         android:id="@+id/custom_numbutton_tv_num"
-        android:layout_width="@dimen/dimen_x120"
-        android:layout_height="@dimen/dimen_x50"
+        android:layout_width="@dimen/dimen_x40"
+        android:layout_height="@dimen/dimen_x25"
         android:gravity="center"
         android:text="1" />
 
     <ImageView
         android:id="@+id/custom_numbutton_iv_jia"
-        android:layout_width="@dimen/dimen_x50"
-        android:layout_height="@dimen/dimen_x50"
+        android:layout_width="@dimen/dimen_x25"
+        android:layout_height="@dimen/dimen_x25"
         android:background="@drawable/icon_btn_add" />
 
 </LinearLayout>

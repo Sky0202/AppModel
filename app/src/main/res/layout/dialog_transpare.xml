@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="@dimen/dimen_x30">
+    android:padding="@dimen/dimen_x10">
 
     <com.wang.avi.AVLoadingIndicatorView
         android:layout_width="wrap_content"

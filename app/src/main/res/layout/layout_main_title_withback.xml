@@ -10,12 +10,12 @@
         android:id="@+id/iv_top_back"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:padding="@dimen/dimen_x25"
+        android:padding="@dimen/dimen_x10"
         android:src="@drawable/icon_back_white" />
 
     <TextView
         android:id="@+id/tv_main_title"
-        style="@style/text_white_50"
+        style="@style/text_white_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -23,17 +23,16 @@
 
     <com.fanqie.appmodel.common.customview.SuperTextView
         android:id="@+id/tv_main_right"
-        style="@style/text_white_40"
+        style="@style/text_white_14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:layout_marginRight="@dimen/dimen_x50"
+        android:layout_marginRight="@dimen/dimen_x15"
         android:gravity="center"
         android:lines="1"
-        android:padding="@dimen/dimen_x25"
-        android:text=""
+        android:padding="@dimen/dimen_x8"
         android:visibility="gone"
         app:pressedBackgroundColor="@color/color_orange_background"
-        app:radius="@dimen/dimen_x10" />
+        app:radius="@dimen/dimen_x3" />
 
 </android.support.v7.widget.Toolbar>

@@ -28,181 +28,151 @@
 
     <!--bottombar 图片样式-->
     <style name="main_fragment_bottombar_iv">
-        <item name="android:layout_width">@dimen/dimen_x70</item>
-        <item name="android:layout_height">@dimen/dimen_x70</item>
-        <item name="android:layout_margin">@dimen/dimen_x10</item>
+        <item name="android:layout_width">@dimen/dimen_x23</item>
+        <item name="android:layout_height">@dimen/dimen_x23</item>
+        <item name="android:layout_margin">@dimen/dimen_x2</item>
     </style>
 
     <!--bottombar 文字样式-->
     <style name="main_fragment_bottombar_tv">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/dimen_x35</item>
+        <item name="android:textSize">@dimen/sp_x12</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_marginBottom">@dimen/dimen_x10</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_x5</item>
 
     </style>
 
-    <!--黑色文字 40-->
-    <style name="text_black_40">
+    <!--黑色文字 13-->
+    <style name="text_black_13">
         <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">@dimen/dimen_x40</item>
+        <item name="android:textSize">@dimen/sp_x13</item>
     </style>
 
-    <!--黑色文字 45-->
-    <style name="text_black_45">
+    <!--黑色文字 14 -->
+    <style name="text_black_14">
         <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">@dimen/dimen_x45</item>
+        <item name="android:textSize">@dimen/sp_x14</item>
     </style>
 
-    <!--黑色文字 50-->
-    <style name="text_black_50">
+    <!--黑色文字 16 -->
+    <style name="text_black_16">
         <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">@dimen/dimen_x50</item>
+        <item name="android:textSize">@dimen/sp_x16</item>
     </style>
 
-    <!--黑色文字 55-->
-    <style name="text_black_55">
+    <!--黑色文字 18 -->
+    <style name="text_black_18">
         <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">@dimen/dimen_x55</item>
+        <item name="android:textSize">@dimen/sp_x18</item>
     </style>
 
-    <!--黑色文字 60-->
-    <style name="text_black_60">
+    <!--黑色文字 20 -->
+    <style name="text_black_20">
         <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">@dimen/dimen_x60</item>
+        <item name="android:textSize">@dimen/sp_x20</item>
     </style>
 
-    <!--主题色文字 35-->
-    <style name="text_colorprimary_35">
+    <!--主题色文字 12-->
+    <style name="text_colorprimary_12">
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/dimen_x40</item>
+        <item name="android:textSize">@dimen/sp_x12</item>
     </style>
 
-    <!--主题色文字 40-->
-    <style name="text_colorprimary_40">
+    <!--主题色文字 13-->
+    <style name="text_colorprimary_13">
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/dimen_x40</item>
+        <item name="android:textSize">@dimen/sp_x13</item>
     </style>
 
-    <!--主题色文字 45-->
-    <style name="text_colorprimary_45">
+    <!--主题色文字 14-->
+    <style name="text_colorprimary_14">
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/dimen_x45</item>
+        <item name="android:textSize">@dimen/sp_x14</item>
     </style>
 
-    <!--主题色文字 50-->
-    <style name="text_colorprimary_50">
+    <!--主题色文字 16-->
+    <style name="text_colorprimary_16">
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/dimen_x50</item>
+        <item name="android:textSize">@dimen/sp_x16</item>
     </style>
 
-    <!--主题色文字 55-->
-    <style name="text_colorprimary_55">
+    <!--主题色文字 18-->
+    <style name="text_colorprimary_18">
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/dimen_x55</item>
+        <item name="android:textSize">@dimen/sp_x18</item>
     </style>
 
-    <!--灰色文字 35-->
-    <style name="text_gray_35">
+    <!--灰色文字 12-->
+    <style name="text_gray_12">
         <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/dimen_x35</item>
+        <item name="android:textSize">@dimen/sp_x12</item>
     </style>
 
-    <!--灰色文字 40-->
-    <style name="text_gray_40">
+    <!--灰色文字 13-->
+    <style name="text_gray_13">
         <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/dimen_x40</item>
+        <item name="android:textSize">@dimen/sp_x13</item>
     </style>
 
-    <!--灰色文字 45-->
-    <style name="text_gray_45">
+    <!--灰色文字 14-->
+    <style name="text_gray_14">
         <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/dimen_x45</item>
+        <item name="android:textSize">@dimen/sp_x14</item>
     </style>
 
-    <!--灰色文字 50-->
-    <style name="text_gray_50">
+    <!--灰色文字 16-->
+    <style name="text_gray_16">
         <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/dimen_x50</item>
+        <item name="android:textSize">@dimen/sp_x16</item>
     </style>
 
-    <!--灰色文字 55-->
-    <style name="text_gray_55">
+    <!--灰色文字 18-->
+    <style name="text_gray_18">
         <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/dimen_x55</item>
+        <item name="android:textSize">@dimen/sp_x18</item>
     </style>
 
-    <!--灰色文字 50-->
-    <style name="text_gray_60">
+    <!--灰色文字 20-->
+    <style name="text_gray_20">
         <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/dimen_x60</item>
+        <item name="android:textSize">@dimen/sp_x20</item>
     </style>
 
-    <!--白色文字 30-->
-    <style name="text_white_30">
+    <!--白色文字 12-->
+    <style name="text_white_12">
         <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/dimen_x30</item>
+        <item name="android:textSize">@dimen/sp_x12</item>
     </style>
 
-    <!--白色文字 40-->
-    <style name="text_white_35">
+    <!--白色文字 13-->
+    <style name="text_white_13">
         <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/dimen_x35</item>
+        <item name="android:textSize">@dimen/sp_x13</item>
     </style>
 
-    <!--白色文字 40-->
-    <style name="text_white_40">
+    <!--白色文字 14-->
+    <style name="text_white_14">
         <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/dimen_x40</item>
+        <item name="android:textSize">@dimen/sp_x14</item>
     </style>
 
-    <!--白色文字 45-->
-    <style name="text_white_45">
+    <!--白色文字 16-->
+    <style name="text_white_16">
         <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/dimen_x45</item>
+        <item name="android:textSize">@dimen/sp_x16</item>
     </style>
 
-    <!--白色文字 50-->
-    <style name="text_white_50">
+    <!--白色文字 18-->
+    <style name="text_white_18">
         <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/dimen_x50</item>
+        <item name="android:textSize">@dimen/sp_x18</item>
     </style>
 
-    <!--白色文字 55-->
-    <style name="text_white_55">
+    <!--白色文字 20-->
+    <style name="text_white_20">
         <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/dimen_x55</item>
-    </style>
-
-    <!--白色文字 60-->
-    <style name="text_white_60">
-        <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/dimen_x60</item>
-    </style>
-
-    <!--红色文字 45-->
-    <style name="text_red_45">
-        <item name="android:textColor">@color/color_red_background</item>
-        <item name="android:textSize">@dimen/dimen_x45</item>
-    </style>
-
-    <!--红色文字 50-->
-    <style name="text_red_50">
-        <item name="android:textColor">@color/color_red_background</item>
-        <item name="android:textSize">@dimen/dimen_x50</item>
-    </style>
-
-    <!--红色文字 55-->
-    <style name="text_red_55">
-        <item name="android:textColor">@color/color_red_background</item>
-        <item name="android:textSize">@dimen/dimen_x55</item>
-    </style>
-
-    <!--红色文字 60-->
-    <style name="text_red_60">
-        <item name="android:textColor">@color/color_red_background</item>
-        <item name="android:textSize">@dimen/dimen_x60</item>
+        <item name="android:textSize">@dimen/sp_x20</item>
     </style>
 
     <!--登录注册页面edittext-->

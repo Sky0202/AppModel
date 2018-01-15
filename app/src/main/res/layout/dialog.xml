@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/ic_loading_bg"
     android:orientation="vertical"
-    android:padding="@dimen/dimen_x30">
+    android:padding="@dimen/dimen_x10">
 
     <com.wang.avi.AVLoadingIndicatorView
         android:layout_width="wrap_content"
@@ -17,10 +17,9 @@
         android:id="@+id/id_tv_loadingmsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_x15"
+        android:layout_marginTop="@dimen/dimen_x5"
         android:layout_gravity="center_horizontal"
-        android:text=""
         android:textColor="#fff"
-        android:textSize="@dimen/dimen_x45" />
+        android:textSize="@dimen/sp_x16" />
 
 </LinearLayout>

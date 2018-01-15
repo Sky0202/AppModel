@@ -9,43 +9,43 @@
         android:id="@+id/view_line"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_x1"
-        android:layout_marginLeft="@dimen/dimen_x30"
-        android:layout_marginRight="@dimen/dimen_x30"
+        android:layout_marginLeft="@dimen/dimen_x5"
+        android:layout_marginRight="@dimen/dimen_x5"
         android:background="@color/color_gray_light" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_line"
-        android:padding="@dimen/dimen_x30">
+        android:padding="@dimen/dimen_x5">
 
         <ImageView
             android:id="@+id/iv_pic_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/dimen_x10"
-            android:layout_marginRight="@dimen/dimen_x10"
+            android:layout_marginLeft="@dimen/dimen_x3"
+            android:layout_marginRight="@dimen/dimen_x3"
             android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv_arrow_title"
-            style="@style/text_black_40"
+            style="@style/text_black_14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/dimen_x15"
+            android:layout_marginLeft="@dimen/dimen_x5"
             android:layout_toRightOf="@+id/iv_pic_left"
             android:singleLine="true"
             tools:text="选项" />
 
         <TextView
             android:id="@+id/tv_arrow_desc"
-            style="@style/text_gray_40"
+            style="@style/text_gray_14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/dimen_x20"
+            android:layout_marginLeft="@dimen/dimen_x8"
             android:layout_toLeftOf="@+id/iv_arrow_right"
             android:layout_toRightOf="@+id/tv_arrow_title"
             android:gravity="right"
@@ -54,11 +54,11 @@
 
         <ImageView
             android:id="@+id/iv_arrow_right"
-            android:layout_width="@dimen/dimen_x50"
-            android:layout_height="@dimen/dimen_x60"
+            android:layout_width="@dimen/dimen_x15"
+            android:layout_height="@dimen/dimen_x28"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_margin="@dimen/dimen_x15"
+            android:layout_margin="@dimen/dimen_x5"
             android:src="@drawable/icon_jiantouright" />
 
     </RelativeLayout>

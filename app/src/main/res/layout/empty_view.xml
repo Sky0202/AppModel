@@ -11,12 +11,12 @@
         android:src="@drawable/empty" />
 
     <TextView
-        style="@style/text_gray_40"
+        style="@style/text_gray_13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iv"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dimen_x20"
+        android:layout_marginTop="@dimen/dimen_x5"
         android:text="暂无数据..." />
 
 

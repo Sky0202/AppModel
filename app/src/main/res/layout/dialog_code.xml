@@ -8,81 +8,84 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="@dimen/dimen_x50"
-        android:layout_marginRight="@dimen/dimen_x50"
+        android:layout_marginLeft="@dimen/dimen_x20"
+        android:layout_marginRight="@dimen/dimen_x20"
         android:background="@drawable/shape_grayframewhite"
         android:minHeight="15dp"
         android:orientation="vertical"
-        android:padding="@dimen/dimen_x30">
+        android:padding="@dimen/dimen_x10">
 
 
         <TextView
-            style="@style/text_black_50"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="@dimen/dimen_x20"
-            android:text="输入验证码" />
+            android:layout_margin="@dimen/dimen_x10"
+            android:text="输入验证码"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/sp_x16" />
 
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_x3"
+            android:layout_height="@dimen/dimen_x1"
             android:background="@color/color_gray_light" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dimen_x80"
-            android:layout_marginTop="@dimen/dimen_x80"
+            android:layout_marginBottom="@dimen/dimen_x20"
+            android:layout_marginTop="@dimen/dimen_x20"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_two_dialog_ok"
-                style="@style/text_black_45"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="输入验证码:" />
+                android:text="输入验证码:"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/sp_x14" />
 
             <EditText
                 android:id="@+id/et_code"
-                style="@style/text_black_45"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"
                 android:hint="请输入右侧验证码"
                 android:lines="1"
-                android:paddingLeft="@dimen/dimen_x10"
-                android:paddingRight="@dimen/dimen_x10"
-                android:singleLine="true" />
+                android:paddingLeft="@dimen/dimen_x5"
+                android:paddingRight="@dimen/dimen_x5"
+                android:singleLine="true"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/sp_x14" />
 
             <ImageView
                 android:id="@+id/iv_code_img"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_x100"
+                android:layout_height="@dimen/dimen_x30"
                 android:layout_weight="0.8" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_x3"
+            android:layout_height="@dimen/dimen_x1"
             android:background="@color/color_gray_light" />
 
         <TextView
             android:id="@+id/tv_confirm_code"
-            style="@style/text_black_50"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_x20"
+            android:layout_marginTop="@dimen/dimen_x10"
             android:gravity="center"
-            android:padding="@dimen/dimen_x20"
+            android:padding="@dimen/dimen_x10"
             android:text="确认"
-            android:textColor="@color/colorAccent" />
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/sp_x15" />
 
     </LinearLayout>
 

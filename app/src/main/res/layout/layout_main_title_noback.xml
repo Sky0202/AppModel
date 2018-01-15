@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main_toolbar_noback"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
@@ -9,7 +7,7 @@
 
     <TextView
         android:id="@+id/tv_main_title"
-        style="@style/text_white_50"
+        style="@style/text_white_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -17,11 +15,11 @@
 
     <TextView
         android:id="@+id/tv_main_right"
-        style="@style/text_white_45"
+        style="@style/text_white_14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:lines="1"
-        android:layout_marginRight="@dimen/dimen_x50" />
+        android:layout_marginRight="@dimen/dimen_x15"
+        android:lines="1" />
 
 </android.support.v7.widget.Toolbar>

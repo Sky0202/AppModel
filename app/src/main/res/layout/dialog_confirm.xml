@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="@dimen/dimen_x820"
+        android:layout_width="@dimen/dimen_x300"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/shape_grayframewhite"
@@ -13,27 +13,27 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_x240"
+            android:layout_height="@dimen/dimen_x80"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv_two_dialog_title"
-                style="@style/text_black_50"
+                style="@style/text_black_16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="10dp"
                 android:text="提示" />
 
             <TextView
                 android:id="@+id/tv_two_dialog_content"
-                style="@style/text_black_45"
+                style="@style/text_black_14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="13dp"
-                android:paddingLeft="@dimen/dimen_x30"
-                android:paddingRight="@dimen/dimen_x30" />
+                android:paddingLeft="@dimen/dimen_x10"
+                android:paddingRight="@dimen/dimen_x10"/>
         </LinearLayout>
 
         <ImageView
@@ -48,32 +48,31 @@
 
             <TextView
                 android:id="@+id/tv_two_dialog_cancle"
-                style="@style/text_black_50"
+                style="@style/text_black_14"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:padding="@dimen/dimen_x30"
-                android:text="" />
+                android:padding="@dimen/dimen_x15" />
 
             <ImageView
-                android:layout_width="@dimen/dimen_x3"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:background="@color/color_gray_light" />
 
             <TextView
                 android:id="@+id/tv_two_dialog_ok"
-                style="@style/text_white_50"
+                style="@style/text_colorprimary_14"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:padding="@dimen/dimen_x30"
-                android:text=""
-                android:textColor="@color/colorAccent" />
+                android:padding="@dimen/dimen_x15" />
+
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
