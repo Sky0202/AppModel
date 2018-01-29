@@ -9,6 +9,8 @@ import java.util.List;
  */
 public class ConstantString {
 
+    public static final String BASE_URL = "http://";
+
     public final static String key = "";
 
     public static List<String> MENUS;

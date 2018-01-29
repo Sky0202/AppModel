@@ -61,7 +61,7 @@ public class RetrofitUtil {
                 .client(builder.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .baseUrl(ConstantUrl.URL)
+                .baseUrl(ConstantString.BASE_URL)
                 .build();
 
         urlInterface = retrofit.create(UrlInterface.class);
@@ -149,15 +149,7 @@ public class RetrofitUtil {
         });
 
         // 构建 retrofit
-        Retrofit retrofit = new Retrofit.Builder()
-                .client(builder.build())
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .baseUrl(ConstantUrl.URL)
-                .build();
-
-        retrofit.create(UrlInterface.class)
-                .download(url)
+        getService().download(url)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .subscribe(new Consumer<Response<ResponseBody>>() {

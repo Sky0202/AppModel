@@ -72,6 +72,9 @@ public class SuperTextView extends AppCompatTextView {
 
     private void setup(AttributeSet attrs) {
 
+        this.setClickable(true);
+        this.setFocusable(true);
+
         states = new int[4][];
         Drawable drawable = getBackground();
 

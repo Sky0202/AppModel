@@ -16,6 +16,8 @@ public abstract class BaseObserver<T> implements Observer<HttpResult<T>> {
 
     private Context mContext;
 
+    private final int NO_TOKEN = 20003;
+
     public BaseObserver(Context context) {
         this.mContext = context;
     }
@@ -27,18 +29,16 @@ public abstract class BaseObserver<T> implements Observer<HttpResult<T>> {
 
     @Override
     public void onNext(HttpResult<T> httpResult) {
-        if (httpResult.getCode() == 1) {
+        int code = httpResult.getCode();
+        if (code == 1 || code == 0) {
             onSuccess(httpResult.getData());
+        } else if (code == NO_TOKEN) {
+            // 去登陆
+            ToastUtils.showMessage("登录信息过期");
         } else {
-            onFailure(httpResult.getCode(), httpResult.getMsg());
+            ToastUtils.showMessage(httpResult.getMsg());
+            onFailure();
         }
-    }
-
-
-    @Override
-    public void onError(Throwable e) {
-
-
     }
 
     @Override
@@ -46,15 +46,11 @@ public abstract class BaseObserver<T> implements Observer<HttpResult<T>> {
 
     }
 
-    protected void onFailure(int code, String msg) {
-        if (code == 20003) {
-            // 去登陆
-            ToastUtils.showMessage("token 失效");
-        } else {
-            ToastUtils.showMessage(msg);
-        }
-    }
-
     protected abstract void onSuccess(T t);
+
+    protected abstract void onFailure();
+
+    @Override
+    public abstract void onError(Throwable e);
 
 }
