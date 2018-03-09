@@ -2,12 +2,16 @@ package com.fanqie.appmodel.common.utils;
 
 import android.annotation.SuppressLint;
 
+import com.fanqie.appmodel.common.constants.ConstantString;
+
 import java.security.MessageDigest;
 
 public class MD5Utils {
 
     @SuppressLint("DefaultLocale")
     public static String encrypt(String plainText) {
+
+        plainText = plainText + ConstantString.SALT;
         String str = "";
         try {
             // 实例化一个算法对象
@@ -30,9 +34,7 @@ public class MD5Utils {
             str = buf.toString();
         } catch (Exception e) {
         }
-        return str.toUpperCase();
+        return str.toLowerCase();
     }
 
-    public static void main(String[] args) {
-    }
 }

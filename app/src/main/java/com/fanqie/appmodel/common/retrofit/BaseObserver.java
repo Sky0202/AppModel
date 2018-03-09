@@ -2,6 +2,8 @@ package com.fanqie.appmodel.common.retrofit;
 
 import android.content.Context;
 
+import com.fanqie.appmodel.common.utils.ActivityUtils;
+import com.fanqie.appmodel.common.utils.PrefersUtils;
 import com.fanqie.appmodel.common.utils.ToastUtils;
 
 import io.reactivex.Observer;
@@ -34,7 +36,9 @@ public abstract class BaseObserver<T> implements Observer<HttpResult<T>> {
             onSuccess(httpResult.getData());
         } else if (code == NO_TOKEN) {
             // 去登陆
-            ToastUtils.showMessage("登录信息过期");
+            ToastUtils.showMessage("请先登录");
+            PrefersUtils.clear();
+//            ActivityUtils.startActivity(mContext, LoginActivity.class);
         } else {
             ToastUtils.showMessage(httpResult.getMsg());
             onFailure();
@@ -52,5 +56,4 @@ public abstract class BaseObserver<T> implements Observer<HttpResult<T>> {
 
     @Override
     public abstract void onError(Throwable e);
-
 }

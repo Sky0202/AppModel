@@ -1,7 +1,5 @@
 package com.fanqie.appmodel.common.constants;
 
-import java.util.List;
-
 /**
  * string公共类
  * <p/>
@@ -13,7 +11,7 @@ public class ConstantString {
 
     public final static String key = "";
 
-    public static List<String> MENUS;
+    public static final String SALT = "";
 
     public final static String FILE_PATH = "/demo/image/";
 

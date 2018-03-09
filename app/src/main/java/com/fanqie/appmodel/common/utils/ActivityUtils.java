@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
-import com.fanqie.appmodel.common.constants.ConstantString;
-
 
 /**
  * Created by zpw on 2017/5/18.
@@ -54,13 +52,10 @@ public class ActivityUtils {
     /**
      * 创建时间：2017/5/24 14:50  描述：拨打客服电话
      */
-    public static void callKefu(Context context) {
-
-//        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + ConstantString.IS_LOGIN));
-//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//        context.startActivity(intent);
-
+    public static void callKefu(Context context, String phone) {
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phone));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
-
 
 }
