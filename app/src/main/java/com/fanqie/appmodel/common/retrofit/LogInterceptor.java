@@ -95,6 +95,7 @@ public class LogInterceptor implements Interceptor {
                 request.writeTo(buffer);
                 // 获得 string
                 String str = buffer.readUtf8();
+                str = str.replaceAll("%(?![0-9a-fA-F]{2})", "%25");
                 URLDecoder urlDecoder = new URLDecoder();
                 // URL 解码
                 String decodeStr = urlDecoder.decode(str, "UTF-8");
@@ -114,6 +115,7 @@ public class LogInterceptor implements Interceptor {
             return "did not work";
         }
     }
+
 
     /**
      * 创建时间：2017/11/6 11:32  描述：格式化 json 数据
