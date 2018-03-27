@@ -5,12 +5,15 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Environment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -57,13 +60,13 @@ public class ImageUtils extends TakePhotoActivity {
      *
      * @param picNum 多选最大张数
      */
-    public static void showChoosePicture(AppCompatActivity activity, TakePhoto takePhoto, int picNum) {
+    public static void showChoosePicture(Context context, TakePhoto takePhoto, int picNum) {
 
         configCompress(takePhoto);
         // 设置旋转角度  是否纠正
         takePhoto.setTakePhotoOptions(new TakePhotoOptions.Builder().setCorrectImage(true).create());
 
-        showPopWindow(activity, takePhoto, picNum, false);
+        showPopWindow(context, takePhoto, picNum, false);
 
     }
 
@@ -74,54 +77,35 @@ public class ImageUtils extends TakePhotoActivity {
      *
      * @author zpw
      */
-    public static void showChoosePicture(AppCompatActivity activity, TakePhoto takePhoto, int picNum, boolean cut) {
+    public static void showChoosePicture(Context context, TakePhoto takePhoto, int picNum, boolean cut) {
 
         configCompress(takePhoto);
         // 设置旋转角度  是否纠正
         takePhoto.setTakePhotoOptions(new TakePhotoOptions.Builder().setCorrectImage(true).create());
-        showPopWindow(activity, takePhoto, picNum, cut);
+        showPopWindow(context, takePhoto, picNum, cut);
 
     }
 
-    private static void showPopWindow(final AppCompatActivity activity, final TakePhoto takePhoto, final int picNum, final boolean cut) {
+    private static void showPopWindow(Context context, final TakePhoto takePhoto, final int picNum, final boolean cut) {
 
         File file = new File(Environment.getExternalStorageDirectory(), ConstantString.FILE_PATH + System.currentTimeMillis() + ".jpg");
         if (!file.getParentFile().exists()) file.getParentFile().mkdirs();
         final Uri imageUri = Uri.fromFile(file);
 
-        LayoutInflater layoutInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View inflateView = layoutInflater.inflate(R.layout.popupwindow_carme, null);
+        final AlertDialog dialog = new AlertDialog.Builder(context).create();
+        dialog.show();
+        Window window = dialog.getWindow();
+        window.setContentView(R.layout.popupwindow_carme);
+        window.setBackgroundDrawableResource(android.R.color.transparent);
+        window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        window.setGravity(Gravity.BOTTOM);
+
+        window.setWindowAnimations(R.style.dialogAni);
 
         //所有按钮的监听事件
-        TextView tv_carme_popuwindow = inflateView.findViewById(R.id.tv_carme_popuwindow);
-        TextView tv_image_popuwindow = inflateView.findViewById(R.id.tv_image_popuwindow);
-        TextView tv_cancel_popuwindow = inflateView.findViewById(R.id.tv_cancel_popuwindow);
-
-        final PopupWindow popupWindow = new PopupWindow(inflateView, WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setFocusable(true);
-        popupWindow.setOutsideTouchable(true);
-        popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-        WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
-        lp.alpha = 0.3f;
-        if (lp.alpha == 1) {
-            //不移除该Flag的话,在有视频的页面上的视频会出现黑屏的bug
-            activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-        } else {
-            //此行代码主要是解决在华为手机上半透明效果无效的bug
-            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-        }
-        activity.getWindow().setAttributes(lp);
-        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
-            @Override
-            public void onDismiss() {
-                //消去遮罩
-                WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
-                lp.alpha = 1f;
-                activity.getWindow().setAttributes(lp);
-
-            }
-        });
+        TextView tv_carme_popuwindow = window.findViewById(R.id.tv_carme_popuwindow);
+        TextView tv_image_popuwindow = window.findViewById(R.id.tv_image_popuwindow);
+        TextView tv_cancel_popuwindow = window.findViewById(R.id.tv_cancel_popuwindow);
 
         // 相机
         tv_carme_popuwindow.setOnClickListener(new View.OnClickListener() {
@@ -132,10 +116,9 @@ public class ImageUtils extends TakePhotoActivity {
                 } else {
                     takePhoto.onPickFromCapture(imageUri);
                 }
-                popupWindow.dismiss();
+                dialog.dismiss();
             }
         });
-
 
         // 相册
         tv_image_popuwindow.setOnClickListener(new View.OnClickListener() {
@@ -150,7 +133,7 @@ public class ImageUtils extends TakePhotoActivity {
                 } else {
                     takePhoto.onPickMultipleWithCrop(picNum, getCropOptions());
                 }
-                popupWindow.dismiss();
+                dialog.dismiss();
             }
         });
 
@@ -158,11 +141,9 @@ public class ImageUtils extends TakePhotoActivity {
         tv_cancel_popuwindow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                popupWindow.dismiss();
+                dialog.dismiss();
             }
         });
-        popupWindow.setAnimationStyle(android.R.style.Animation_InputMethod);
-        popupWindow.showAtLocation(inflateView, Gravity.BOTTOM, 0, 50);
 
     }
 

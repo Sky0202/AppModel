@@ -267,4 +267,10 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
+    <!-- dialog 动画 -->
+    <style name="dialogAni" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
 </resources>
