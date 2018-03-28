@@ -52,13 +52,24 @@ public class StatusBarUtils {
      */
     public static int StatusBarLightMode(Activity activity) {
         int result = 0;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        // 手机型号
+        String brand = Build.BRAND;
+        DebugLog.e(brand);
+        if ("Xiaomi".equals(brand) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            // View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN   全屏
+            activity.getWindow()
+                    .getDecorView()
+                    .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            result = 4;
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if (MIUISetStatusBarLightMode(activity.getWindow(), true)) {
                 result = 1;
             } else if (FlymeSetStatusBarLightMode(activity.getWindow(), true)) {
                 result = 2;
             } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+                activity.getWindow()
+                        .getDecorView()
+                        .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
                 result = 3;
             }
         }
@@ -99,10 +110,11 @@ public class StatusBarUtils {
 
     /**
      * 修改状态栏颜色，支持4.4以上版本
+     *
      * @param activity
      * @param colorId
      */
-    public static void setStatusBarColor(Activity activity,int colorId) {
+    public static void setStatusBarColor(Activity activity, int colorId) {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
@@ -183,15 +195,5 @@ public class StatusBarUtils {
         }
         return result;
     }
-
-    /** 创建时间：2017/10/23 14:22  描述：兼容小米 MIUI9  实现状态栏黑色字体 */
-    public static void MIUI9SetStatusBarLightMode(Window window) {
-        if (window != null) {
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        }
-    }
-
 
 }

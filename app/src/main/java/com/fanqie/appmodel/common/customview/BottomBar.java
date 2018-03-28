@@ -92,26 +92,11 @@ public class BottomBar extends RelativeLayout {
      */
     public void iniClick() {
 
-        //防抖动测试
-//        RxView.clicks(bottombar_ll_first)
-//                .throttleFirst(1, TimeUnit.SECONDS)
-//                .subscribe(new Action1<Void>() {
-//                    @Override
-//                    public void call(Void aVoid) {
-//
-//                    }
-//                });
-
         bottombar_ll_first.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 showFirst();
-                ObjectAnimator anim1 = ObjectAnimator.ofFloat(bottombar_ll_first, "scaleX", 0.9f, 1f);
-                ObjectAnimator anim2 = ObjectAnimator.ofFloat(bottombar_ll_first, "scaleY", 0.9f, 1f);
-                AnimatorSet animSet = new AnimatorSet();
-                animSet.setDuration(400);
-                animSet.playTogether(anim1, anim2);
-                animSet.start();
+                clickAnimation(bottombar_ll_first);
                 onBottomButtonClickListener.firstClick();
             }
         });
@@ -121,12 +106,7 @@ public class BottomBar extends RelativeLayout {
             public void onClick(View view) {
 
                 showSecond();
-                ObjectAnimator anim1 = ObjectAnimator.ofFloat(bottombar_ll_second, "scaleX", 0.9f, 1f);
-                ObjectAnimator anim2 = ObjectAnimator.ofFloat(bottombar_ll_second, "scaleY", 0.9f, 1f);
-                AnimatorSet animSet = new AnimatorSet();
-                animSet.setDuration(400);
-                animSet.playTogether(anim1, anim2);
-                animSet.start();
+                clickAnimation(bottombar_ll_second);
                 onBottomButtonClickListener.secondClick();
 
             }
@@ -136,12 +116,7 @@ public class BottomBar extends RelativeLayout {
             @Override
             public void onClick(View view) {
                 showThird();
-                ObjectAnimator anim1 = ObjectAnimator.ofFloat(bottombar_ll_third, "scaleX", 0.9f, 1f);
-                ObjectAnimator anim2 = ObjectAnimator.ofFloat(bottombar_ll_third, "scaleY", 0.9f, 1f);
-                AnimatorSet animSet = new AnimatorSet();
-                animSet.setDuration(400);
-                animSet.playTogether(anim1, anim2);
-                animSet.start();
+                clickAnimation(bottombar_ll_third);
                 onBottomButtonClickListener.thirdClick();
             }
         });
@@ -150,12 +125,7 @@ public class BottomBar extends RelativeLayout {
             @Override
             public void onClick(View view) {
                 showFourth();
-                ObjectAnimator anim1 = ObjectAnimator.ofFloat(bottombar_ll_fourth, "scaleX", 0.9f, 1f);
-                ObjectAnimator anim2 = ObjectAnimator.ofFloat(bottombar_ll_fourth, "scaleY", 0.9f, 1f);
-                AnimatorSet animSet = new AnimatorSet();
-                animSet.setDuration(400);
-                animSet.playTogether(anim1, anim2);
-                animSet.start();
+                clickAnimation(bottombar_ll_fourth);
                 onBottomButtonClickListener.fourClick();
 
             }
@@ -165,17 +135,21 @@ public class BottomBar extends RelativeLayout {
             @Override
             public void onClick(View view) {
                 showFifth();
-                ObjectAnimator anim1 = ObjectAnimator.ofFloat(bottombar_ll_fifth, "scaleX", 0.9f, 1f);
-                ObjectAnimator anim2 = ObjectAnimator.ofFloat(bottombar_ll_fifth, "scaleY", 0.9f, 1f);
-                AnimatorSet animSet = new AnimatorSet();
-                animSet.setDuration(200);
-                animSet.playTogether(anim1, anim2);
-                animSet.start();
+                clickAnimation(bottombar_ll_fifth);
                 onBottomButtonClickListener.fifthClick();
 
             }
         });
 
+    }
+
+    private static void clickAnimation(LinearLayout bottombar) {
+        ObjectAnimator anim1 = ObjectAnimator.ofFloat(bottombar, "scaleX", 0.9f, 1f);
+        ObjectAnimator anim2 = ObjectAnimator.ofFloat(bottombar, "scaleY", 0.9f, 1f);
+        AnimatorSet animSet = new AnimatorSet();
+        animSet.setDuration(400);
+        animSet.playTogether(anim1, anim2);
+        animSet.start();
     }
 
     /**
@@ -231,61 +205,61 @@ public class BottomBar extends RelativeLayout {
 
     }
 
-    // 第一页 红色
+    // 第一个按钮 点击
     public void setFirstColorSelected() {
-        bottombar_iv_first.setImageDrawable(getResources().getDrawable(R.drawable.bot1_on ));
+        bottombar_iv_first.setImageDrawable(getResources().getDrawable(R.drawable.bot1_on));
         bottombar_tv_first.setTextColor(colorDisplay);
     }
 
-    // 第一页 白色
+    // 第一个按钮 默认
     public void setFirstColorNormal() {
         bottombar_iv_first.setImageDrawable(getResources().getDrawable(R.drawable.bot1));
         bottombar_tv_first.setTextColor(color);
     }
 
-    // 第二页 红色
+    // 第二个按钮 点击
     public void setSecondColorSelected() {
         bottombar_iv_second.setImageDrawable(getResources().getDrawable(R.drawable.bot2_on));
         bottombar_tv_second.setTextColor(colorDisplay);
     }
 
-    // 第二页 白色
+    // 第二个按钮 默认
     public void setSecondColorNormal() {
         bottombar_iv_second.setImageDrawable(getResources().getDrawable(R.drawable.bot2));
         bottombar_tv_second.setTextColor(color);
     }
 
-    // 第三页 红色
+    // 第三个按钮 点击
     public void setThirdColorSelected() {
         bottombar_iv_third.setImageDrawable(getResources().getDrawable(R.drawable.bot3_on));
         bottombar_tv_third.setTextColor(colorDisplay);
     }
 
-    // 第三页 白色
+    // 第三个按钮 默认
     public void setThirdColorNormal() {
         bottombar_iv_third.setImageDrawable(getResources().getDrawable(R.drawable.bot3));
         bottombar_tv_third.setTextColor(color);
     }
 
-    // 第四页 红色
+    // 第四个按钮 点击
     public void setFourthColorSelected() {
         bottombar_iv_fourth.setImageDrawable(getResources().getDrawable(R.drawable.bot4_on));
         bottombar_tv_fourth.setTextColor(colorDisplay);
     }
 
-    // 第四页 白色
+    // 第四个按钮 默认
     public void setFourthColorNormal() {
         bottombar_iv_fourth.setImageDrawable(getResources().getDrawable(R.drawable.bot4));
         bottombar_tv_fourth.setTextColor(color);
     }
 
-    // 第五页 红色
+    // 第五个按钮 点击
     public void setFifthColorSelected() {
         bottombar_iv_fifth.setImageDrawable(getResources().getDrawable(R.drawable.bot4_on));
         bottombar_tv_fifth.setTextColor(colorDisplay);
     }
 
-    // 第五页 白色
+    // 第五个按钮 默认
     public void setFifthColorNormal() {
         bottombar_iv_fifth.setImageDrawable(getResources().getDrawable(R.drawable.bot4));
         bottombar_tv_fifth.setTextColor(color);
@@ -333,9 +307,7 @@ public class BottomBar extends RelativeLayout {
     }
 
     public void setOnBottomButtonClickListener(OnBottomButtonClickListener onBottomButtonClickListener) {
-
         this.onBottomButtonClickListener = onBottomButtonClickListener;
-
     }
 
 

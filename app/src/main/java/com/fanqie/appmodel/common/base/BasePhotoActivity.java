@@ -1,39 +1,34 @@
 package com.fanqie.appmodel.common.base;
 
-import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
 import com.fanqie.appmodel.R;
+import com.jph.takephoto.app.TakePhotoActivity;
+import com.jph.takephoto.model.TResult;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * 锁死返回键 activity基类
+ * 创建时间：2018/3/28 11:06
+ * <p>
+ * 描述： 用来启动相机以及相册使用的类
+ *
+ * @author zpw
  */
-public abstract class BaseActivity extends AppCompatActivity {
+
+public abstract class BasePhotoActivity extends TakePhotoActivity {
 
     private Dialog progressDialog;
     private Unbinder unbinder;
 
     public View emptyView;
-
-    private String[] mPermissionList = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.CALL_PHONE,
-            Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -53,24 +48,21 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * 检查是否需要申请权限
-     */
-    public void requestPermission() {
-        if (Build.VERSION.SDK_INT < 22) {
-            return;
-        }
-
-        for (String permission : mPermissionList) {
-            if (ContextCompat.checkSelfPermission(this, permission) !=
-                    PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(BaseActivity.this, mPermissionList, 123);
-                return;
-
-            }
-        }
-
+    @Override
+    public void takeSuccess(TResult result) {
+        super.takeSuccess(result);
     }
+
+    @Override
+    public void takeFail(TResult result, String msg) {
+        super.takeFail(result, msg);
+    }
+
+    @Override
+    public void takeCancel() {
+        super.takeCancel();
+    }
+
 
     //设置布局文件
     public abstract int setContentViewId();
@@ -105,7 +97,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     public void showprogressDialog(String dialogMsg) {
-        progressDialog = new Dialog(BaseActivity.this, R.style.progress_dialog);
+        progressDialog = new Dialog(BasePhotoActivity.this, R.style.progress_dialog);
         progressDialog.setContentView(R.layout.dialog);
         progressDialog.setCancelable(true);
         progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -116,7 +108,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     public void showprogressTransparentDialog() {
-        progressDialog = new Dialog(BaseActivity.this, R.style.progress_dialog);
+        progressDialog = new Dialog(BasePhotoActivity.this, R.style.progress_dialog);
         progressDialog.setContentView(R.layout.dialog_transpare);
         progressDialog.setCancelable(true);
         progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -141,6 +133,5 @@ public abstract class BaseActivity extends AppCompatActivity {
             });
         }
     }
-
 
 }

@@ -9,7 +9,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
- * Created by Administrator on 2017/6/2.
+ * Created by zpw on 2017/6/2.
+ * 自动刷新
  */
 
 public class AutoSwipeRefreshLayout extends SwipeRefreshLayout {

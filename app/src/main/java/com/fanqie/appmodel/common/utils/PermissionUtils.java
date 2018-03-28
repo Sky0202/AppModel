@@ -21,30 +21,13 @@ import java.util.List;
  * 权限工具类
  * <p>
  * 申请获取权限
- * premissionUtils = new PremissionUtils(MainActivity.this);
- * premissionUtils.registerPermissionListener(new PremissionUtils.IPermissionFinish() {
- *
- * @Override public void permissionSuccess() {
- * Log.i("log", "--success--");
- * }
- * });
- * String[] premission = { PremissionUtils.writeexternal , PremissionUtils.carmera};
- * premissionUtils.askPermission(premission, 100);
- * <p>
- * 取得权限处理
- * @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
- * super.onRequestPermissionsResult(requestCode, permissions, grantResults);
- * premissionUtils.onRequestPermissionsResult(requestCode, permissions, grantResults);
- * }
- * <p>
- * 常见问题
  * 点击不调取
  * 查看manifest里面是否添加了需要申请的权限
  * 高版本也需要添加危险权限
  * fragment里面需要做额外的处理
  * <p>
  * <p>
- * Created by Administrator on 2016/9/5.
+ * Created by zpw on 2016/9/5.
  */
 public class PermissionUtils {
 

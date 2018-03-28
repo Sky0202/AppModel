@@ -41,7 +41,6 @@ public abstract class CodeDialog extends Dialog {
         dialog = new AlertDialog.Builder(context).create();
         dialog.show();
         dialog.setCanceledOnTouchOutside(false);
-        httpGetCode();
 
         Window window = dialog.getWindow();
         window.setContentView(R.layout.dialog_code);
@@ -59,89 +58,20 @@ public abstract class CodeDialog extends Dialog {
         ivCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                httpGetCode();
+
             }
         });
 
         btn_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                httpValidateCode(etCode.getText().toString());
+
             }
         });
 
     }
 
     public abstract void onSure();
-
-    // 获取图片验证码
-    private void httpGetCode() {
-
-        OkhttpUtils.RequestCallback callBack = new OkhttpUtils.RequestCallback() {
-            @Override
-            public void onFail(IOException e) {
-
-            }
-
-            @Override
-            public void onSuccess(String data) throws IOException, InterruptedException {
-                if (data != null) {
-
-                    Glide.with(mContext)
-                            .load(ConstantUrl.IMG_URL + data)
-                            .into(ivCode);
-
-                }
-            }
-
-            @Override
-            public void onError() throws IOException {
-
-            }
-
-            @Override
-            public void onNoData() {
-
-            }
-        };
-
-//        OkhttpUtils.getInstance().AsynPostNoParams(ConstantUrl.GET_CODE, callBack);
-
-    }
-
-    // 验证图片码
-    private void httpValidateCode(String code) {
-
-        OkhttpUtils.RequestCallback callBack = new OkhttpUtils.RequestCallback() {
-            @Override
-            public void onFail(IOException e) {
-
-            }
-
-            @Override
-            public void onSuccess(String data) throws IOException, InterruptedException {
-                dialog.cancel();
-                onSure();
-            }
-
-            @Override
-            public void onError() throws IOException {
-
-            }
-
-            @Override
-            public void onNoData() {
-
-            }
-        };
-
-        FormBody body = new FormBody.Builder()
-                .add("img_code", code)
-                .build();
-
-//        OkhttpUtils.getInstance().AsynPost(ConstantUrl.ISTRUE_VALIDATECODE, body, callBack);
-
-    }
 
 
 }
