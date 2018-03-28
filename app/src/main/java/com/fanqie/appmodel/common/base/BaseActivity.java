@@ -54,7 +54,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     * 检查是否需要申请权限
+     * 申请权限
      */
     public void requestPermission() {
         if (Build.VERSION.SDK_INT < 22) {
