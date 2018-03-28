@@ -42,10 +42,6 @@ public class MainActivity extends BaseActivity {
         vpContainer.setAdapter(mainPagerAdapter);
 //        vpContainer.setOffscreenPageLimit(4);  // 预加载 4 页
 
-        int mode = StatusBarUtils.StatusBarLightMode(this);
-
-//        DebugLog.e(mode + "");
-
     }
 
     @Override
