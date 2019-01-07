@@ -5,13 +5,13 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="@dimen/dimen_x10">
+    android:padding="10dp">
 
     <com.wang.avi.AVLoadingIndicatorView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         wheel:indicatorName="BallClipRotatePulseIndicator"
-        wheel:indicatorColor="@color/colorPrimary"/>
+        wheel:indicatorColor="@color/colorPrimary" />
 
 </LinearLayout>

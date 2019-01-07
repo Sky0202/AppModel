@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 /**
  * eventbus传递数据
- *
+ * <p>
  * Created by Administrator on 2016/7/11.
  */
 public class RxBusBundle {

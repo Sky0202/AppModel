@@ -2,7 +2,6 @@ package com.fanqie.appmodel.common.retrofit;
 
 import android.content.Context;
 
-import com.fanqie.appmodel.common.utils.ActivityUtils;
 import com.fanqie.appmodel.common.utils.PrefersUtils;
 import com.fanqie.appmodel.common.utils.ToastUtils;
 

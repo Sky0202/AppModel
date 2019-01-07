@@ -12,14 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.fanqie.appmodel.R;
-import com.fanqie.appmodel.common.constants.ConstantUrl;
-import com.fanqie.appmodel.common.utils.OkhttpUtils;
-
-import java.io.IOException;
-
-import okhttp3.FormBody;
 
 
 public abstract class CodeDialog extends Dialog {

@@ -8,34 +8,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="@dimen/dimen_x20"
-        android:layout_marginRight="@dimen/dimen_x20"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/shape_grayframewhite"
         android:minHeight="15dp"
         android:orientation="vertical"
-        android:padding="@dimen/dimen_x10">
+        android:padding="10dp">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="@dimen/dimen_x10"
+            android:layout_margin="10dp"
             android:text="输入验证码"
             android:textColor="@color/color_black"
-            android:textSize="@dimen/sp_x16" />
+            android:textSize="16sp" />
 
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_x1"
+            android:layout_height="1dp"
             android:background="@color/color_gray_light" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dimen_x20"
-            android:layout_marginTop="@dimen/dimen_x20"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -48,7 +48,7 @@
                 android:gravity="center"
                 android:text="输入验证码:"
                 android:textColor="@color/color_black"
-                android:textSize="@dimen/sp_x14" />
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/et_code"
@@ -57,35 +57,35 @@
                 android:layout_weight="1.5"
                 android:hint="请输入右侧验证码"
                 android:lines="1"
-                android:paddingLeft="@dimen/dimen_x5"
-                android:paddingRight="@dimen/dimen_x5"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
                 android:singleLine="true"
                 android:textColor="@color/color_black"
-                android:textSize="@dimen/sp_x14" />
+                android:textSize="14sp" />
 
             <ImageView
                 android:id="@+id/iv_code_img"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_x30"
+                android:layout_height="30dp"
                 android:layout_weight="0.8" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_x1"
+            android:layout_height="1dp"
             android:background="@color/color_gray_light" />
 
         <TextView
             android:id="@+id/tv_confirm_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_x10"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:padding="@dimen/dimen_x10"
+            android:padding="10dp"
             android:text="确认"
             android:textColor="@color/colorAccent"
-            android:textSize="@dimen/sp_x15" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 

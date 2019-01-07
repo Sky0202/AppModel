@@ -22,8 +22,8 @@
         android:title="item4" />
 
     <!--<item-->
-        <!--android:id="@+id/item5"-->
-        <!--android:icon="@android:drawable/star_big_on"-->
-        <!--android:title="item5" />-->
+    <!--android:id="@+id/item5"-->
+    <!--android:icon="@android:drawable/star_big_on"-->
+    <!--android:title="item5" />-->
 
 </menu>

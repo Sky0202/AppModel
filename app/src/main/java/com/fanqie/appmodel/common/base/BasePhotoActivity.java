@@ -9,8 +9,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.fanqie.appmodel.R;
-import com.jph.takephoto.app.TakePhotoActivity;
-import com.jph.takephoto.model.TResult;
+
+import org.devio.takephoto.app.TakePhotoActivity;
+import org.devio.takephoto.model.TResult;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;

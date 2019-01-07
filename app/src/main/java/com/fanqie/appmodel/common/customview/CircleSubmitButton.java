@@ -132,7 +132,7 @@ public class CircleSubmitButton extends View {
             okPaintColor = typedArray.getColor(R.styleable.CircleSubmitButton_buttonOkColor, Color.GREEN);
             buttonString = typedArray.getString(R.styleable.CircleSubmitButton_buttonText);
             duration = (long) typedArray.getFloat(R.styleable.CircleSubmitButton_buttonAnimationDuration, 800);
-            textSize = typedArray.getDimension(R.styleable.CircleSubmitButton_buttonTextSize, getResources().getDimension(R.dimen.dimen_x50));
+            textSize = typedArray.getDimension(R.styleable.CircleSubmitButton_buttonTextSize, 20);
             move_distance = typedArray.getFloat(R.styleable.CircleSubmitButton_buttonMoveupDistance, 300);
 
             typedArray.recycle();

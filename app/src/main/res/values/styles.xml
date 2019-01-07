@@ -28,157 +28,19 @@
 
     <!--bottombar 图片样式-->
     <style name="main_fragment_bottombar_iv">
-        <item name="android:layout_width">@dimen/dimen_x23</item>
-        <item name="android:layout_height">@dimen/dimen_x23</item>
-        <item name="android:layout_margin">@dimen/dimen_x2</item>
+        <item name="android:layout_width">23dp</item>
+        <item name="android:layout_height">23dp</item>
+        <item name="android:layout_margin">2dp</item>
     </style>
 
     <!--bottombar 文字样式-->
     <style name="main_fragment_bottombar_tv">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/sp_x12</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_marginBottom">@dimen/dimen_x5</item>
+        <item name="android:layout_marginBottom">5dp</item>
 
-    </style>
-
-    <!--黑色文字 13-->
-    <style name="text_black_13">
-        <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">@dimen/sp_x13</item>
-    </style>
-
-    <!--黑色文字 14 -->
-    <style name="text_black_14">
-        <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">@dimen/sp_x14</item>
-    </style>
-
-    <!--黑色文字 16 -->
-    <style name="text_black_16">
-        <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">@dimen/sp_x16</item>
-    </style>
-
-    <!--黑色文字 18 -->
-    <style name="text_black_18">
-        <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">@dimen/sp_x18</item>
-    </style>
-
-    <!--黑色文字 20 -->
-    <style name="text_black_20">
-        <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">@dimen/sp_x20</item>
-    </style>
-
-    <!--主题色文字 12-->
-    <style name="text_colorprimary_12">
-        <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/sp_x12</item>
-    </style>
-
-    <!--主题色文字 13-->
-    <style name="text_colorprimary_13">
-        <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/sp_x13</item>
-    </style>
-
-    <!--主题色文字 14-->
-    <style name="text_colorprimary_14">
-        <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/sp_x14</item>
-    </style>
-
-    <!--主题色文字 16-->
-    <style name="text_colorprimary_16">
-        <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/sp_x16</item>
-    </style>
-
-    <!--主题色文字 18-->
-    <style name="text_colorprimary_18">
-        <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/sp_x18</item>
-    </style>
-
-    <!--灰色文字 12-->
-    <style name="text_gray_12">
-        <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/sp_x12</item>
-    </style>
-
-    <!--灰色文字 13-->
-    <style name="text_gray_13">
-        <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/sp_x13</item>
-    </style>
-
-    <!--灰色文字 14-->
-    <style name="text_gray_14">
-        <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/sp_x14</item>
-    </style>
-
-    <!--灰色文字 16-->
-    <style name="text_gray_16">
-        <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/sp_x16</item>
-    </style>
-
-    <!--灰色文字 18-->
-    <style name="text_gray_18">
-        <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/sp_x18</item>
-    </style>
-
-    <!--灰色文字 20-->
-    <style name="text_gray_20">
-        <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textSize">@dimen/sp_x20</item>
-    </style>
-
-    <!--白色文字 12-->
-    <style name="text_white_12">
-        <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/sp_x12</item>
-    </style>
-
-    <!--白色文字 13-->
-    <style name="text_white_13">
-        <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/sp_x13</item>
-    </style>
-
-    <!--白色文字 14-->
-    <style name="text_white_14">
-        <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/sp_x14</item>
-    </style>
-
-    <!--白色文字 16-->
-    <style name="text_white_16">
-        <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/sp_x16</item>
-    </style>
-
-    <!--白色文字 18-->
-    <style name="text_white_18">
-        <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/sp_x18</item>
-    </style>
-
-    <!--白色文字 20-->
-    <style name="text_white_20">
-        <item name="android:textColor">@color/color_white</item>
-        <item name="android:textSize">@dimen/sp_x20</item>
-    </style>
-
-    <!--登录注册页面edittext-->
-    <style name="login_edittext">
-        <item name="android:background">@null</item>
-        <item name="android:layout_marginLeft">@dimen/dimen_x10</item>
     </style>
 
     <!--大图轮播-->
@@ -239,22 +101,6 @@
         <item name="banner_tipTextColor">@android:color/white</item>
         <!-- 加载网络数据时覆盖在BGABanner最上层的占位图 -->
         <item name="banner_placeholderDrawable">@color/color_gray</item>
-    </style>
-
-
-    <!--登录注册找回密码 hint-->
-    <style name="text_hint_50">
-        <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textColorHint">@color/color_gray_light</item>
-        <item name="android:textSize">@dimen/dimen_x50</item>
-        <item name="android:background">@null</item>
-    </style>
-
-    <style name="text_hint_45">
-        <item name="android:textColor">@color/color_gray</item>
-        <item name="android:textColorHint">@color/color_gray_light</item>
-        <item name="android:textSize">@dimen/dimen_x45</item>
-        <item name="android:background">@null</item>
     </style>
 
     <style name="progress_dialog" parent="@android:style/Theme.Dialog">

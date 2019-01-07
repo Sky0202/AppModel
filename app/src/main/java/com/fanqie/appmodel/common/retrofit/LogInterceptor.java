@@ -1,6 +1,7 @@
 package com.fanqie.appmodel.common.retrofit;
 
 import android.text.TextUtils;
+
 import com.alibaba.fastjson.JSON;
 import com.fanqie.appmodel.common.utils.DebugLog;
 

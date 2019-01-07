@@ -1,15 +1,12 @@
 package com.fanqie.appmodel.main.activity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.view.KeyEvent;
 
 import com.fanqie.appmodel.R;
 import com.fanqie.appmodel.common.base.BaseActivity;
 import com.fanqie.appmodel.common.customview.BottomBar;
 import com.fanqie.appmodel.common.customview.NoScrollViewPager;
-import com.fanqie.appmodel.common.utils.DebugLog;
-import com.fanqie.appmodel.common.utils.StatusBarUtils;
 import com.fanqie.appmodel.common.utils.ToastUtils;
 import com.fanqie.appmodel.main.adapter.MainPagerAdapter;
 

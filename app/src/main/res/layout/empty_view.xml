@@ -11,12 +11,13 @@
         android:src="@drawable/empty" />
 
     <TextView
-        style="@style/text_gray_13"
+        android:textSize="13sp"
+        android:textColor="@color/color_gray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iv"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dimen_x5"
+        android:layout_marginTop="5dp"
         android:text="暂无数据..." />
 
 

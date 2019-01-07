@@ -19,7 +19,7 @@ public class BitMapCompressUtils {
 
     public static final String TAG = "ehome" + BitMapCompressUtils.class.getName();
 
-    public static File compress(String path , int tagerX, int tagerY, long tagerSize) {
+    public static File compress(String path, int tagerX, int tagerY, long tagerSize) {
 
 //        String path = getRealPathFromURI(fileUri);
         File outputFile = new File(path);
@@ -131,7 +131,7 @@ public class BitMapCompressUtils {
 //        return cursor.getString(column_index);
 //    }
 
-	/**
+    /**
      * 通过uri获取图片
      *
      * @param ac

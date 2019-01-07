@@ -1,6 +1,5 @@
 package com.fanqie.appmodel.common.utils;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;

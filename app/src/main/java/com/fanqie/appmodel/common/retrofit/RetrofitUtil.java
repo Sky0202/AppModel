@@ -14,7 +14,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.fanqie.appmodel.R;
 import com.fanqie.appmodel.common.application.MyApplication;
 import com.fanqie.appmodel.common.constants.ConstantString;
-import com.fanqie.appmodel.common.constants.ConstantUrl;
 import com.fanqie.appmodel.common.utils.DebugLog;
 
 import java.io.File;

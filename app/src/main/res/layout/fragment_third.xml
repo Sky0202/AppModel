@@ -3,11 +3,9 @@
     android:layout_height="match_parent">
 
     <TextView
-        style="@style/text_black_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="@dimen/dimen_x30"
         android:text="第三页" />
 
 </RelativeLayout>

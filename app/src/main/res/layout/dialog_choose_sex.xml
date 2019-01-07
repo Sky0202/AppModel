@@ -8,43 +8,43 @@
         android:id="@+id/tv_dialog_nan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen_x10"
-        android:layout_marginRight="@dimen/dimen_x10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/shape_top_circle"
         android:gravity="center"
-        android:padding="@dimen/dimen_x10"
+        android:padding="10dp"
         android:text="男"
         android:textColor="@color/color_black"
-        android:textSize="@dimen/sp_x18" />
+        android:textSize="18sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.3dp"
-        android:layout_marginLeft="@dimen/dimen_x10"
-        android:layout_marginRight="@dimen/dimen_x10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:background="@color/color_gray" />
 
     <TextView
         android:id="@+id/tv_dialog_nv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen_x10"
-        android:layout_marginRight="@dimen/dimen_x10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/shape_top_circle"
         android:gravity="center"
-        android:padding="@dimen/dimen_x10"
+        android:padding="10dp"
         android:text="女"
         android:textColor="@color/color_black"
-        android:textSize="@dimen/sp_x18"  />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn_cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_x10"
+        android:layout_margin="10dp"
         android:background="@drawable/shape_grayframewhite"
         android:text="取消"
         android:textColor="@color/color_black"
-        android:textSize="@dimen/sp_x18" />
+        android:textSize="18sp" />
 
 </LinearLayout>

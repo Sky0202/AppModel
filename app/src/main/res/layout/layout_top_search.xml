@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
+    android:layout_height="54dp"
     android:background="@color/colorPrimary"
     android:gravity="center"
     android:orientation="horizontal"
-    android:padding="@dimen/dimen_x10">
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/tv_home_location"
-        style="@style/text_white_14"
+        android:textSize="14sp"
+        android:textColor="@color/color_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/dimen_x7"
-        android:drawablePadding="@dimen/dimen_x4"
+        android:layout_marginRight="7dp"
+        android:drawablePadding="4dp"
         android:drawableRight="@drawable/icon_home_loction_arrow_down"
         android:text="北京" />
 
@@ -23,24 +24,25 @@
         android:layout_height="wrap_content"
         android:background="@drawable/shape_searchbg"
         android:gravity="center"
-        android:padding="@dimen/dimen_x7">
+        android:padding="7dp">
 
         <ImageView
             android:id="@+id/iv_search"
-            android:layout_width="@dimen/dimen_x15"
-            android:layout_height="@dimen/dimen_x15"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/dimen_x7"
+            android:layout_marginRight="7dp"
             android:src="@drawable/indexsearch" />
 
         <TextView
-            style="@style/text_gray_14"
+            android:textSize="14sp"
+            android:textColor="@color/color_gray"
             android:layout_toRightOf="@+id/iv_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/dimen_x7"
+            android:layout_marginRight="7dp"
             android:hint="搜商品,找品牌" />
 
     </RelativeLayout>
